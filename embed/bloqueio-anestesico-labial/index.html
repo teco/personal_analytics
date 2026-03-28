@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Aula Liberada – Bloqueio Anestésico Labial</title>
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '3390735831090068');
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent', { content_ids: ['aula bonus'] });
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3390735831090068&ev=PageView&noscript=1"/></noscript>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%; height: 100%;
+      background: #000; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .video-wrapper {
+      position: relative;
+      /* Fit 16:9 inside viewport, leaving room for safe-area (home indicator / gesture bar) */
+      width: min(100vw, calc((100dvh - env(safe-area-inset-bottom, 20px)) * 16 / 9));
+      height: min(calc(100dvh - env(safe-area-inset-bottom, 20px)), calc(100vw * 9 / 16));
+      overflow: hidden;
+    }
+    iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    @keyframes cta-enter {
+      from { opacity: 0; transform: translateX(20px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes cta-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(158, 125, 74, 0.6); }
+      50%       { box-shadow: 0 0 0 8px rgba(158, 125, 74, 0); }
+    }
+    #cta {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+      background: #9E7D4A;
+      color: #fff;
+      padding: 14px 42px 14px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      width: min(250px, 45%);
+      line-height: 1.3;
+      cursor: pointer;
+      animation: cta-enter 0.4s ease-out, cta-pulse 2s ease-in-out 0.4s infinite;
+      transition: opacity 0.6s ease;
+    }
+    #cta strong {
+      display: block;
+      font-size: 17px;
+      font-weight: 600;
+      font-family: sans-serif;
+    }
+    #cta span {
+      display: block;
+      font-size: 13px;
+      font-family: sans-serif;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+    #cta svg {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 18px;
+      height: 18px;
+      opacity: 0.85;
+    }
+
+    /* Landscape mobile */
+    @media (orientation: landscape) and (max-height: 500px) {
+      #cta {
+        width: min(100px, 18%);
+        padding: 5px 18px 5px 7px;
+        border-radius: 5px;
+      }
+      #cta.wide         { width: min(150px, 25%); padding: 6px 18px 6px 7px; }
+      #cta.wide strong  { font-size: 9px; }
+      #cta.wide span    { font-size: 8px; }
+      #cta strong { font-size: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      #cta span   { font-size: 7px; margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      #cta svg    { width: 10px; height: 10px; top: 5px; right: 5px; }
+    }
+
+    /* Portrait mobile */
+    @media (orientation: portrait) and (max-width: 600px) {
+      #cta {
+        width: min(75px, 22%);
+        padding: 4px 16px 4px 6px;
+        border-radius: 5px;
+        top: 8px;
+        right: 8px;
+      }
+      #cta.wide         { width: min(120px, 33%); padding: 5px 16px 5px 6px; }
+      #cta.wide strong  { font-size: 8px; }
+      #cta.wide span    { font-size: 7px; }
+      #cta strong { font-size: 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      #cta span   { font-size: 6px; margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      #cta svg    { width: 9px; height: 9px; top: 4px; right: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="video-wrapper" id="wrapper">
+    <iframe
+      id="vimeo-player"
+      src="https://player.vimeo.com/video/1176329057?h=9bcf05f018&badge=0&autopause=0&player_id=0&app_id=58479"
+      width="960"
+      height="540"
+      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      title="Aula Liberada Bloqueio Anestésico Labial"
+    ></iframe>
+    <a id="cta" href="https://patriciapaturle.hotmart.host/imersao-em-labios-lab-academy-1d8bf07f-6c97-4943-9d5d-5a1a383a3a6f" target="_blank">
+      <strong id="cta-title"></strong>
+      <span id="cta-sub"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+        <polyline points="15 3 21 3 21 9"/>
+        <line x1="10" y1="14" x2="21" y2="3"/>
+      </svg>
+    </a>
+  </div>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+    var ctas = [
+      { from: 270, to: 280, title: 'Vá além do volume',   sub: 'Ver o curso completo' },
+      { from: 510, to: 520, title: 'Construção Labial',    sub: 'Ver o curso completo',  wide: true },
+      { from: 693, to: 708, title: 'Curso Imersão Labial', sub: 'Vagas abertas: Lote 1',   wide: true },
+      { from: 708,          title: 'Garantir Lote 1',      sub: 'De R$1.997,00 por R$497', wide: true },
+    ];
+
+    var wrapper  = document.getElementById('wrapper');
+    var iframe   = document.getElementById('vimeo-player');
+    var cta      = document.getElementById('cta');
+    var ctaTitle = document.getElementById('cta-title');
+    var ctaSub   = document.getElementById('cta-sub');
+
+    var player = new Vimeo.Player('vimeo-player');
+
+    var currentActive = null;
+    var fadeTimer     = null;
+    var trackedPlay     = false;
+    var tracked50       = false;
+    var trackedComplete = false;
+
+    player.on('play', function() {
+      if (trackedPlay) return;
+      trackedPlay = true;
+      fbq('trackCustom', 'VideoPlay', { video_name: 'Bloqueio Anestésico' });
+    });
+
+    player.on('timeupdate', function(data) {
+      var seconds = data.seconds;
+      var duration = data.duration;
+
+      if (!tracked50 && (seconds / duration) >= 0.5) {
+        fbq('trackCustom', 'VideoWatched50', { video_name: 'Bloqueio Anestésico' });
+        tracked50 = true;
+      }
+
+      if (!trackedComplete && seconds >= 750) {
+        fbq('trackCustom', 'VideoComplete', { video_name: 'Bloqueio Anestésico' });
+        trackedComplete = true;
+      }
+
+      var active = null;
+      for (var i = 0; i < ctas.length; i++) {
+        var c = ctas[i];
+        if (seconds >= c.from && (!c.to || seconds < c.to)) active = c;
+      }
+
+      if (active) {
+        if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = null; }
+        if (active !== currentActive) {
+          ctaTitle.textContent = active.title;
+          ctaSub.textContent   = active.sub;
+          cta.classList.toggle('wide', !!active.wide);
+          if (!currentActive) {
+            // Was hidden — trigger entrance animation
+            cta.style.animation = 'none';
+            cta.offsetHeight; // force reflow
+            cta.style.animation = '';
+            cta.style.opacity   = '';
+            cta.style.display   = 'block';
+          }
+          currentActive = active;
+        }
+      } else {
+        if (currentActive) {
+          currentActive = null;
+          cta.style.opacity = '0';
+          fadeTimer = setTimeout(function() {
+            cta.style.display = 'none';
+            cta.style.opacity = '';
+            fadeTimer = null;
+          }, 600);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
