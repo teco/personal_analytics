@@ -20,24 +20,51 @@
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3390735831090068&ev=PageView&noscript=1"/></noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     html, body {
-      width: 100%; height: 100%;
-      background: #000; overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
+      width: 100%;
+      min-height: 100%;
+      background: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px 32px;
+      font-family: sans-serif;
     }
-    .video-wrapper {
+
+    .page-wrapper {
+      width: 100%;
+      max-width: 860px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    /* Video */
+    .video-container {
       position: relative;
-      /* Fit 16:9 inside viewport, leaving room for safe-area (home indicator / gesture bar) */
-      width: min(100vw, calc((100dvh - env(safe-area-inset-bottom, 20px)) * 16 / 9));
-      height: min(calc(100dvh - env(safe-area-inset-bottom, 20px)), calc(100vw * 9 / 16));
+      width: 100%;
+      border-radius: 12px;
       overflow: hidden;
+      background: #000;
     }
+
+    .video-aspect {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+    }
+
     iframe {
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
       border: none;
     }
+
+    /* Timed CTA overlay */
     @keyframes cta-enter {
       from { opacity: 0; transform: translateX(20px); }
       to   { opacity: 1; transform: translateX(0); }
@@ -67,12 +94,10 @@
       display: block;
       font-size: 17px;
       font-weight: 600;
-      font-family: sans-serif;
     }
     #cta span {
       display: block;
       font-size: 13px;
-      font-family: sans-serif;
       opacity: 0.8;
       margin-top: 4px;
     }
@@ -116,29 +141,68 @@
       #cta span   { font-size: 6px; margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
       #cta svg    { width: 9px; height: 9px; top: 4px; right: 4px; }
     }
+
+    /* Bottom CTA button */
+    .btn-cta {
+      display: block;
+      width: 100%;
+      max-width: 680px;
+      padding: 22px 32px;
+      background: #B8943F;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      border-radius: 100px;
+      letter-spacing: 0.01em;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+    .btn-cta:hover {
+      background: #a07c30;
+      transform: translateY(-1px);
+    }
+    .btn-cta:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+      html, body { padding: 16px 12px 24px; }
+      .btn-cta { font-size: 17px; padding: 18px 24px; }
+      .page-wrapper { gap: 18px; }
+    }
   </style>
 </head>
 <body>
-  <div class="video-wrapper" id="wrapper">
-    <iframe
-      id="vimeo-player"
-      src="https://player.vimeo.com/video/1177748733?h=eb01d001dc&badge=0&autopause=0&player_id=0&app_id=58479"
-      width="960"
-      height="540"
-      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      title="Aula Liberada Bloqueio Anestésico Labial"
-    ></iframe>
-    <a id="cta" href="https://patriciapaturle.hotmart.host/imersao-em-labios-lab-academy-1d8bf07f-6c97-4943-9d5d-5a1a383a3a6f" target="_blank">
-      <strong id="cta-title"></strong>
-      <span id="cta-sub"></span>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-        <polyline points="15 3 21 3 21 9"/>
-        <line x1="10" y1="14" x2="21" y2="3"/>
-      </svg>
+  <div class="page-wrapper">
+    <div class="video-container">
+      <div class="video-aspect">
+        <iframe
+          id="vimeo-player"
+          src="https://player.vimeo.com/video/1177748733?h=eb01d001dc&badge=0&autopause=0&player_id=0&app_id=58479"
+          width="960"
+          height="540"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          title="Aula Liberada Bloqueio Anestésico Labial"
+        ></iframe>
+        <a id="cta" href="https://patriciapaturle.hotmart.host/imersao-em-labios-lab-academy-1d8bf07f-6c97-4943-9d5d-5a1a383a3a6f" target="_blank">
+          <strong id="cta-title"></strong>
+          <span id="cta-sub"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <a class="btn-cta" href="https://patriciapaturle.hotmart.host/imersao-em-labios-lab-academy-1d8bf07f-6c97-4943-9d5d-5a1a383a3a6f" target="_blank">
+      Ver o Curso Completo
     </a>
   </div>
+
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script>
     var ctas = [
@@ -148,7 +212,6 @@
       { from: 708,          title: 'Garantir Lote 1',      sub: 'De R$1.997,00 por R$497', wide: true },
     ];
 
-    var wrapper  = document.getElementById('wrapper');
     var iframe   = document.getElementById('vimeo-player');
     var cta      = document.getElementById('cta');
     var ctaTitle = document.getElementById('cta-title');
@@ -195,9 +258,8 @@
           ctaSub.textContent   = active.sub;
           cta.classList.toggle('wide', !!active.wide);
           if (!currentActive) {
-            // Was hidden — trigger entrance animation
             cta.style.animation = 'none';
-            cta.offsetHeight; // force reflow
+            cta.offsetHeight;
             cta.style.animation = '';
             cta.style.opacity   = '';
             cta.style.display   = 'block';
